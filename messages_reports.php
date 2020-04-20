@@ -11,8 +11,8 @@ if ($_SESSION['rank']!=2)
 	header('location:home.php');
 }}?>
 <center>
-<a href="home.php"><p align="right">Home Page</p></a>
-<a href="messages_reports.php"><p align="right">Back to support messages</p></a>
+<a href="home.php"><p align="right">עמוד הבית</p></a>
+<a href="messages_reports.php"><p align="right">תחזיר הודעה לתמיכה</p></a>
 </center>
 <?php if (!isset($_POST['submitid']) and !isset($_POST['submitdate']) and !isset($_POST['submituser'])) {?>
 	<br><br><br><br><br>
@@ -20,17 +20,17 @@ if ($_SESSION['rank']!=2)
 	<form action="messages_reports.php" method="post">
 	<table border=1>
 	<tr>
-	<th colspan=3>Support Messages By Message ID</th>
+	<th colspan=3>תמיכה הודעות</th>
 	</tr>
 	<tr>
-	<td>Serach by Message ID</td>
+	<td></td>
 	<td><input type="text" name="id" /></td>
 	<td><input type="submit" name="submitid" value="By message ID"></td>
 	</tr>
 	</table>
 	<br>
 	<table>
-	<th colspan=3>Search by date</th>
+	<th colspan=3>חיפוש על ידי תאריך</th>
 	</tr>
 	<tr>
 	<td>Enter Year:</td>
@@ -48,10 +48,10 @@ if ($_SESSION['rank']!=2)
 	</table>
 	<br>
 	<table>
-	<center><th colspan=3>Search by username</th></center>
+	<center><th colspan=3>חיפוש על ידי השם משתמש</th></center>
 	</tr>
 	<tr>
-	<td>Enter Username:</td>
+	<td>הכנס שם משתמש</td>
 	<td><input type="text" name="user" /></td>
 	</tr>
 	<td><input type="submit" name="submituser" value="Search By Username"></td>

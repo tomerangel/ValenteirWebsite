@@ -49,13 +49,15 @@ body {
 
 </div>
 
-<div class="main" align="right">
-  <h2>קצת עלינו</h2>
-  <p>מסל"ן-  מרכז סיוע לנפגעות ולנפגעי אלימות ותקיפה מינית, פועל מאז שנת 1988 ע"י מתנדבות ונשות מקצוע במטרה להעצים, ללוות ולתמוך מעשית ורגשית בנפגעות ובנפגעי אלימות ואלימות מינית ומשפחותיהן/ם.
+<div class="main" >
+  <h2 dir="rtl">קצת עלינו</h2>
+  <p style="font-size: 20px"dir="rtl">מסל"ן-  מרכז סיוע לנפגעות ולנפגעי אלימות ותקיפה מינית, פועל מאז שנת 1988 ע"י מתנדבות ונשות מקצוע במטרה להעצים, ללוות ולתמוך מעשית ורגשית בנפגעות ובנפגעי אלימות ואלימות מינית ומשפחותיהן/ם.
       כאן במסל"ן אנו שואפות למגר את תופעת האלימות והאלימות המינית בחברה באמצעות מחלקת החינוך, המניעה וההסברה שלנו שמפיעה סדנאות, הדרכות ימי עיון והפעלות בכל רחבי הנגב.
       הצטרפו אלינו ותמכו בעשייה החשובה הזו!
-
-      Maslan –The Negev's Sexual Assault and Domestic Violence Support Center  is a nonprofit organization operating since 1988 to empower survivors of sexual and physical abuse from all sectors, religions and nationalities in the south of Israel. Maslan works to combat the epidemic of sexual and domestic violence in Israeli society by providing education, advocacy and prevention services to the all of the Negev's communities.
+  </p>
+</br>
+    <h2>About Us</h2>
+    <p style="font-size: 20px" >  Maslan –The Negev's Sexual Assault and Domestic Violence Support Center  is a nonprofit organization operating since 1988 to empower survivors of sexual and physical abuse from all sectors, religions and nationalities in the south of Israel. Maslan works to combat the epidemic of sexual and domestic violence in Israeli society by providing education, advocacy and prevention services to the all of the Negev's communities.
       Get involved - join us on facebook - donate at www.maslan.org.il
 
       :History: MASLAN is one of nine crisis centers in Israel, under the Union of Crisis centers in Israel, an organization that supports and coordinates the activities of all crisis centers in Israel. MASLAN is in charge of the Negev area - from Kiryat Gat in the north to Eilat in the south. The first Crisis Center in Israel was founded in Tel Aviv in the year 1978 by the feminist movement as a reaction to the sad incident that occurred in Tel Aviv. A student at Tel Aviv University, a mother of a child, was raped in the fields surrounding the University on her way home from class.

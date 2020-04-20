@@ -108,7 +108,7 @@ body {
 </style>
 </head>
 <body>
-<div class="navbar" >
+<div class="navbar" dir="rtl">
     <div >
         <a href="home.php" >עמוד הבית</a>
   	<?php if (isset($_SESSION['username'])) {
@@ -119,11 +119,11 @@ body {
 	$_SESSION['rank']=$result['rank'];
 	if ($result['rank']==0||$result['rank']==2) {
 	?>
-	<div class="dropdown">
+	<div class="dropdown" dir="rtl">
     <button class="dropbtn"><?php echo $username; ?>
       <i class="fa fa-caret-down"></i>
     </button>
-    <div class="dropdown-content">
+    <div class="dropdown-content" dir="rtl">
       <div class="row" align="right">
         <div class="column" align="right">
           <h3>הזמנות</h3>
@@ -133,7 +133,7 @@ body {
         </div>
           <div class="column">
               <h3>Cart</h3>
-              <a href="cart.php">העגלה שלי</a>
+              <a  href="cart.php">העגלה שלי</a>
               <a href="wishlist.php">רשימת הקניות</a>
           </div>
 	   </div>
