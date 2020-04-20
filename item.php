@@ -60,12 +60,12 @@
 
 <body>
 
-<h2>Custom Select</h2>
+<h2>בחירתך</h2>
 
 <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
 <div class="custom-select" style="width:200px;">
   <select>
-    <option value="1">select size</option>
+    <option value="1">מידה</option>
     <option value="1">XS</option>
     <option value="2">S</option>
     <option value="3">M</option>
@@ -82,10 +82,10 @@
       </p>
     <p>
         <button type="button" class="btn btn-default btn-sm">
-          <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+          <span class="glyphicon glyphicon-shopping-cart"></span> עגלה
         </button>
 		<a href="payment.php">
-        <button type="submit" class="signupbtn">Buy now!</button>
+        <button type="submit" class="signupbtn">קנה עכשיו !</button>
 		</a>
       </p>
 
