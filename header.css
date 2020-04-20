@@ -1,0 +1,212 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+
+
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    font-family: MS Gothic, MS Gothic, MS Gothic;
+}
+
+.navbar a {
+    float: left;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 12px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #d3d3d3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d3d3d3;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: Dotum;
+}
+
+.dropdown-content .header {
+    background: #d3d3d3;
+    padding: 16px;
+    color: black;
+    font-family: Dotum;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: white;
+    height: 400px;
+}
+
+.column a {
+    float: none;
+    color: black;
+    padding: 19px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.column a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a href="home.php">Home</a>
+  	<?php if (isset($_SESSION['username'])) {
+	$username=$_SESSION['username'];
+	$db = mysqli_connect('localhost', 'root', '','registarion');
+	$rank=mysqli_query($db,"SELECT rank from users where username='$username'");
+	$result = mysqli_fetch_array($rank);
+	$_SESSION['rank']=$result['rank'];
+	if ($result['rank']==0||$result['rank']==2) {
+	?>
+	<div class="dropdown">
+    <button class="dropbtn"><?php echo $username; ?>
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="row">
+        <div class="column">
+          <h3>Orders</h3>
+          <a href="customer_orders.php">My Orders</a>
+        </div>
+        <div class="column">
+          <h3>Cart</h3>
+          <a href="cart.php">My Cart</a>
+		  <a href="wishlist.php">My Wishlist</a>
+        </div>
+
+	<?php
+		}
+	} ?>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Menu
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Arlen design</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <h3>Clothes</h3>
+          <a href="tops.php">Tops</a>
+          <a href="dresses.php">Dresses</a>
+          <a href="bottoms.php">Bottoms</a>
+        </div>
+        <div class="column">
+          <h3>Shoes</h3>
+          <a href="heels.php">Heels</a>
+          <a href="flats.php">Flats</a>
+        </div>
+        <div class="column">
+          <h3>Acceorise</h3>
+          <a href="sunglasses.php">Sunglasses</a>
+          <a href="bags.php">Bags</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    <a href="contact.php">Contact us</a>
+	<a href="about.php">About us</a>
+	<a href="search.php">Search items</a>
+	<a href="cart.php">Cart</a>
+	<?php if (isset($_SESSION['username'])) {
+	$username=$_SESSION['username'];
+	$db = mysqli_connect('localhost', 'root', '','registarion');
+	$rank=mysqli_query($db,"SELECT rank from users where username='$username'");
+	$result = mysqli_fetch_array($rank);
+	$_SESSION['rank']=$result['rank'];
+	if ($result['rank']==2) {
+	?>
+	<div class="dropdown">
+    <button class="dropbtn">Administration
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="row">
+        <div class="column">
+          <h3>Products</h3>
+          <a href="add_product.php">Add new product</a>
+		  <a href="edit_product.php">Update products</a>
+		  <a href="delete_product.php">Delete products</a>
+      <a href="delete_user.php">Delete users</a>
+        </div>
+        <div class="column">
+          <h3>Reports</h3>
+          <a href="payment_reports.php">Payments</a>
+		  <a href="order_reports.php">Orders</a>
+      <a href="shippment_reports.php">shippments</a>
+      <a href="lack.php">lack</a>
+		  <a href="product_reports.php">Products on store</a>
+        <a href="edit_users.php">users</a>
+		  <a href="tinfo.php">Total Info</a>
+        </div>
+		<div class="column">
+          <h3>Shipping</h3>
+          <a href="add_product.php">Shipping info</a>
+        </div>
+	<?php
+		}
+	} ?>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
